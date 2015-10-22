@@ -1,0 +1,23 @@
+{
+	"name": "kairion",
+	"description": "Parses feeds",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"test": "jasmine-node --captureExceptions spec/"
+	},
+	"dependencies": {
+		"async": "",
+		"yargs": "",
+		"lodash": "",
+		"morgan": "",
+		"winston": "",
+		"request": "",
+		"js-yaml": "",
+		"express": "",
+		"csv-parse": ""
+	},
+	"devDependencies": {
+		"jasmine-node": ""
+	}
+}

@@ -1,0 +1,6 @@
+---
+  ua: 'kairion test bot'
+  host: 'localhost'
+  port: 9999
+  timeout: 180
+  shops: []
