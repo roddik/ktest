@@ -4,6 +4,7 @@ var _ = require('lodash');
 var async = require('async');
 var yaml = require('js-yaml');
 var morgan = require('morgan');
+var assert = require('assert');
 var logger = require('winston');
 var request = require('request');
 var express = require('express');
@@ -28,7 +29,9 @@ if (fs.existsSync(argv.config)) {
 } else if (argv.config != defaultCustomConfig) {
 	logger.error("Custom config path: " + argv.config + " provided, but file is missing");
 }
-console.log(argv.config);
+
+assert(config.shops.length > 0, "Can't work with no shop definitions");
+
 var browser = request.defaults({
 	timeout: config.timeout * 1000,
 	headers: {
