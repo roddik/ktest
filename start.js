@@ -14,7 +14,7 @@ var defaultCustomConfig = "./local-config.yaml";
 
 var argv = require('yargs').
 	option('config', { describe: "Custom config", default: defaultCustomConfig, alias: "c" }).
-	option('loglevel', { describe: "Log level", default: "info", alias: "l", choices: _.keys(logger.levels) }).
+	option('loglevel', { describe: "Log level", default: "silly", alias: "l", choices: _.keys(logger.levels) }).
 	wrap(120).strict().argv;
 
 logger.level = argv.loglevel;
