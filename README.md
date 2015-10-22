@@ -2,7 +2,7 @@
 
 * `git clone git@github.com:roddik/ktest.git`
 * `npm install`
-* Create local-config.yaml (path can be changed and then provided with `-c`), with an array of shop definitions, e.g.:
+* Create `local-config.yaml` (path can be changed and then provided with `-c`), with an array of shop definitions, e.g.:
 ```
 ---
   shops:
@@ -17,9 +17,10 @@
 
 # Testing
 
-* npm test
+* `npm test`
 
 # Running
 
+* Will load data from all servers (parallel), crash on any error, then start listening on provided host:port
 * Fetch price: `/?shop=someshop&product_id=123`
-* Refreshing price: `/refresh`
+* Refreshing price: `/refresh`. Will load new data from all urls, on error - will log it and continue serving previous data
